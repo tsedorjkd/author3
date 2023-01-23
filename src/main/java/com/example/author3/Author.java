@@ -7,11 +7,10 @@ import java.util.ArrayList;
 import java.util.Date;
 
 
+@AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-@Entity
-@Table
+@Builder
+@Data
 public class Author {
 
     @Id
@@ -25,17 +24,11 @@ public class Author {
             generator = "author_id_sequence"
     )
     private Integer id;
-
-    @Column
     private String name;
-
-    @Column
     private Date dateOfBirth;
-
-    @Column
     private String language;
 
 
-    public Author(String name, Integer id, String language, Date dateOfBirth, ArrayList<Object> objects) {
-    }
+//    public Author(String name, Integer id, String language, Date dateOfBirth, ArrayList<Object> objects) {
+//    }
 }
